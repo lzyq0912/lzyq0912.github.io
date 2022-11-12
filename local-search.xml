@@ -4,6 +4,62 @@
   
   
   <entry>
+    <title>STL</title>
+    <link href="/2022/11/12/STL/"/>
+    <url>/2022/11/12/STL/</url>
+    
+    <content type="html"><![CDATA[<p>###<center>STL<br><code>a.size()</code>��<code>a.empty()</code>����Ψһ�ģ�ÿ��stl��������˵��ã��������Ӷ�Ϊ<code>o(1)</code>ֱ��ȡ<br>#####vector<br>�䳤���飬��̬���ݣ�˫�����ݣ���̯���Ӷ�o(1)<br><code>vector&lt;int&gt; a(10,3)</code>����һ������Ϊ10��vector������ÿ��������3</p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">front</span>()/<span class="hljs-title">back</span>();<span class="hljs-title">push_back</span>()/<span class="hljs-variable">pop_back</span>;<span class="hljs-title">begin</span>()/<span class="hljs-title">end</span>();<span class="hljs-title">empty</span>();<span class="hljs-title">erase</span>();</span><br></code></pre></td></tr></table></figure><p><code>for(auto x:a)</code>ΪC++11������ķ�Χ�������������Ч�ʸ��ߡ�<br>vector֧�ֱȽ�����<br>#####pair<br><code>pair&lt;int,int&gt;</code>�洢һ����Ԫ�飬ǰ��������Ϳ������⣬<code>eg:pair&lt;int,string&gt;</code>�����е���<code>a.first</code>���ص�һ��Ԫ�أ�<code>a.second</code>���صڶ���Ԫ�أ�Ҳ֧�ֱȽϣ���<code>first</code>Ϊ��һ�ؼ��֣���<code>second</code>Ϊ�ڶ��ؼ��֡�����ͬʱ���������ԡ���������Ƕ�״洢������ͬ�����ԡ�<br>#####string<br>�ַ���,<code>substr()</code>����ĳһ���Ӵ���<code>c_str()</code>����һ���ַ������ͷָ�루��ʼ��ַ����<br><code>string a = &quot;lzyq&quot;,a += &quot;acwing&quot;;</code>����ʵ���ַ���ƴ��<br><code>a.substr(1,2)</code>������zy��ʡ�Եڶ�������������򷵻������ִ�<br><code>size()/length()</code>�����ַ�������<br>#####queue</p><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scss">����β���룬<span class="hljs-built_in">push</span>();<br>���ض�ͷԪ�أ�<span class="hljs-built_in">front</span>();<br>���ض�βԪ�أ�<span class="hljs-built_in">back</span>();<br>�Ѷ�ͷ������<span class="hljs-built_in">pop</span>();<br>�޷�<span class="hljs-attribute">clear</span>()<br></code></pre></td></tr></table></figure><p>#####priority_queue<br>���ȼ����У�Ĭ���Ǵ����<br><code>#include &lt;queue&gt;</code></p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">priority_queue&lt;<span class="hljs-type">int</span>&gt; heap;<span class="hljs-comment">//�����</span><br>priority_queue&lt;<span class="hljs-type">int</span>,vector&lt;<span class="hljs-type">int</span>&gt;,greater&lt;<span class="hljs-type">int</span>&gt;&gt; heap;<span class="hljs-comment">//С����</span><br><span class="hljs-built_in">push</span>()���������Ԫ�أ�<span class="hljs-built_in">top</span>()���ضѶ���<span class="hljs-built_in">pop</span>()�����Ѷ���������<span class="hljs-built_in">delmax</span>()<br>û��clear����<br></code></pre></td></tr></table></figure><p>#####stack<br>ջ</p><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">push</span>();<span class="hljs-attribute">top</span>();<span class="hljs-built_in">pop</span>();<span class="hljs-built_in">size</span>();<span class="hljs-built_in">empty</span>();<br></code></pre></td></tr></table></figure><p>#####deque<br>��ǿ��vector��˫�˶��У���ͷ��β�����Բ���ɾ��������֧���������<code>[]</code></p><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">size</span>();<span class="hljs-title">empty</span>();<span class="hljs-title">clear</span>();<span class="hljs-title">front</span>();<span class="hljs-title">back</span>();<span class="hljs-title">push_back</span>()/<span class="hljs-title">pop_back</span>();<span class="hljs-title">push_front</span>()/<span class="hljs-title">pop_front</span>();<span class="hljs-title">begin</span>()/<span class="hljs-title">end</span>();</span><br></code></pre></td></tr></table></figure><p>֧�����Ѱַ��Ч�ʵ͵����˷�ָ<br>#####set��map��multiset��multimap<br><code>#include &lt;map&gt;</code><br>����ʱ�临�ӶȻ����϶���<code>o(logn)</code><br>����BBST(�����)����̬ά���������С�</p><ol><li><code>set</code>���治�������ظ�Ԫ�أ���������ظ��ᱻ���ԣ�<code>multiset</code>�������ظ�Ԫ�� <figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">insert</span>()����һ����;</span><br><span class="hljs-function"><span class="hljs-title">find</span>()����һ����;</span><br><span class="hljs-function"><span class="hljs-title">count</span>()����ĳ�����ĸ���;</span><br><span class="hljs-function"><span class="hljs-title">erase</span>()</span><br>    ������һ������ɾ�����<span class="hljs-variable">е</span>���������Ľڵ㣬�����������ɾ�������������<br><span class="hljs-function"><span class="hljs-title">lower_bound</span>()/<span class="hljs-title">upper_bound</span>();</span><br><span class="hljs-function">    ǰ�߷��ش��ڵ���<span class="hljs-variable">x</span>��<span class="hljs-variable">С</span>���������߷��ش���<span class="hljs-variable">x</span>����<span class="hljs-variable">С</span>�����������Ի��ԡ�</span><br></code></pre></td></tr></table></figure></li><li><code>map</code>��<code>multimap</code>Ҳ֧��<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-built_in">insert</span>();���������һ��pair<br>erase;����Ĳ�����pair���ߵ�����<br><span class="hljs-built_in">find</span>();<br>����������һ����ʹ��<br>eg:map&lt;string,<span class="hljs-type">int</span>&gt; a;<br>a[<span class="hljs-string">&quot;lzyq&quot;</span>] = <span class="hljs-number">1</span>; <span class="hljs-comment">//�������ӳ��</span><br><span class="hljs-built_in">lower_bound</span>()/<span class="hljs-built_in">upper_bound</span>();<br></code></pre></td></tr></table></figure></li></ol><p>#####unordered_set��unordered_map��unordered_multiset��unordered_multimap<br>���ڹ�ϣ����ʵ�ֵģ������������һ������ɾ�Ĳ�ʱ�临�Ӷȶ���<code>o(1)</code>,��֧��<code>lower_bound()/upper_bound()</code>;Ҳ֧�ֵ�������++��–<br>#####bitset<br>��λͼӦ����һ��ԭ�������ǲ�̫һ����ѹ����λͼ���д洢<br><code>bitset&lt;10000&gt; A</code>����һ������Ϊ10000��bitset<br>֧��<code>~,&amp;,|,^,&gt;&gt;,&lt;&lt;,&gt;&gt;,==,!=,[];</code></p><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">count</span>()�����ж��ٸ�<span class="hljs-number">1</span>;<br><span class="hljs-built_in">any</span>()�ж��Ƿ�������һ��<span class="hljs-number">1</span>;<br><span class="hljs-attribute">none</span>()�ж��Ƿ�ȫΪ<span class="hljs-number">0</span>;<br><span class="hljs-built_in">set</span>()������λ�ñ��<span class="hljs-number">1</span>;<br><span class="hljs-built_in">set</span>(k,v)�ѵ�kλ���v;<br><span class="hljs-built_in">reset</span>()������λ���<span class="hljs-number">0</span><br><span class="hljs-built_in">flip</span>()�ȼ���~;<br><span class="hljs-built_in">flip</span>(k)�ѵ�kλȡ��;<br></code></pre></td></tr></table></figure><p>#####list<br>�б���ListNode֮���</p><p>####<del>��ʵ��ûɶ�õĶ�������ΪҪ�õ�ʱ��ֱ�������ͺ���</del></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>���Ի�����DSA</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>���Ի���</tag>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>�ַ�����ϣ</title>
+    <link href="/2022/11/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/"/>
+    <url>/2022/11/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/</url>
+    
+    <content type="html"><![CDATA[<p>##<center>�ַ�����ϣ</center><br>####����<br>�������ڰ��ַ��������һ��p���Ƶ������ó�һ��ǰ׺�Ĺ�ϣֵ��pһ��ȡ131��13331ʱ���ᷢ����ͻ����Ϊ�������Ƚϴ������ҪMod Q�������õ�һ����0~Q-1֮�䡣<br>####ע������</p><ol><li>�������ֲ���ӳ���0����Ϊ0��p���ƻ���0����˶��ͬ�������֣���ͬ���ַ����ͱ����ͬ�������֡�</li><li>�ַ�����ϣ��һ�����費�ᷢ����ͻ�Ĺ��̣�pȡ131��13331��Qȡ2^64��û�д�����ͻ��������</li><li>��������һ��ǰ׺��ϣ������һ����ʽ��������κ�һ���ִ��Ĺ�ϣֵ��</li><li>ʵ���ϲ���Ҫȡģ��������п�������unsigned long long ���洢���е�h�������ʵ��ȡģ��Ч����</li></ol><p>####��ⷽ��<br><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111713666.png" alt="��ⷽ��"><br>�ɴ˿ɼ�h[l-r] &#x3D; h[r] - h[l] * P^(r-l+1)<br>####����<br>�ɴ˿�֪���ǵĽ��ۣ�h[i] &#x3D; h[i-1] * P + str[i];<br>####����</p><center>AcWing 841.�ַ�����ϣ</center><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100010</span>,P = <span class="hljs-number">131</span>;<br><br><span class="hljs-keyword">typedef</span>  <span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ULL;<br><br><span class="hljs-type">int</span> n ,m;<br><span class="hljs-type">char</span> str[N];<br>ULL h[N],p[N];<br><br><span class="hljs-function">ULL <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> h[r]-h[l<span class="hljs-number">-1</span>]*p[r-l+<span class="hljs-number">1</span>];<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%s&quot;</span>,&amp;n,&amp;m,str+<span class="hljs-number">1</span>);<br>    p[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i&lt;=n;i++)<br>    &#123;<br>        p[i] = p[i<span class="hljs-number">-1</span>] * P;<br>        h[i] = h[i<span class="hljs-number">-1</span>] * P + str[i];<br>    &#125;<br>    <span class="hljs-keyword">while</span>(m--)<br>    &#123;<br>        <span class="hljs-type">int</span> l1,r1,l2,r2;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d%d&quot;</span>,&amp;l1,&amp;r1,&amp;l2,&amp;r2);<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">get</span>(l1,r1)==<span class="hljs-built_in">get</span>(l2,r2)) <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Yes&quot;</span>);<br>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;No&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>####���н�ͼ![���н�ͼ](https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111721941.png)]]></content>
+    
+    
+    <categories>
+      
+      <category>�㷨��DSA</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>�㷨</tag>
+      
+      <tag>ģ����</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>由直方图最大矩形引出单调栈问题</title>
     <link href="/2022/09/17/%E7%94%B1%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2%E5%BC%95%E5%87%BA%E5%8D%95%E8%B0%83%E6%A0%88%E9%97%AE%E9%A2%98/"/>
     <url>/2022/09/17/%E7%94%B1%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2%E5%BC%95%E5%87%BA%E5%8D%95%E8%B0%83%E6%A0%88%E9%97%AE%E9%A2%98/</url>
@@ -20,9 +76,9 @@
     
     <tags>
       
-      <tag>算法</tag>
-      
       <tag>hexo</tag>
+      
+      <tag>算法</tag>
       
     </tags>
     

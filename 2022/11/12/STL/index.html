@@ -17,28 +17,23 @@
   <meta name="author" content="CycloneJoker">
   <meta name="keywords" content="">
   
-    <meta name="description" content="由力扣84引出单调栈问题 leetcode 84给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。 求在该柱状图中，能够勾勒出来的矩形的最大面积。 示例 1:  123输入：heights &#x3D; [2,1,5,6,2,3]输出：10解释：最大的矩形为图中红色区域，面积为 10  示例 2：  12输入： heights &#x3D; [2,4]输出： 4 提示：  1 &amp;">
+    <meta name="description" content="###STLa.size()��a.empty()����Ψһ�ģ�ÿ��stl��������˵��ã��������Ӷ�Ϊo(1)ֱ��ȡ#####vector�䳤���飬��̬���ݣ�˫�����ݣ���̯���Ӷ�o(1)vector&lt;int&gt; a(10,3)����һ������Ϊ10��vector������ÿ��������3 1front()&#x2F;back();push">
 <meta property="og:type" content="article">
-<meta property="og:title" content="由直方图最大矩形引出单调栈问题">
-<meta property="og:url" content="http://example.com/2022/09/17/%E7%94%B1%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2%E5%BC%95%E5%87%BA%E5%8D%95%E8%B0%83%E6%A0%88%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="STL">
+<meta property="og:url" content="http://example.com/2022/11/12/STL/index.html">
 <meta property="og:site_name" content="CycloneJoker">
-<meta property="og:description" content="由力扣84引出单调栈问题 leetcode 84给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。 求在该柱状图中，能够勾勒出来的矩形的最大面积。 示例 1:  123输入：heights &#x3D; [2,1,5,6,2,3]输出：10解释：最大的矩形为图中红色区域，面积为 10  示例 2：  12输入： heights &#x3D; [2,4]输出： 4 提示：  1 &amp;">
+<meta property="og:description" content="###STLa.size()��a.empty()����Ψһ�ģ�ÿ��stl��������˵��ã��������Ӷ�Ϊo(1)ֱ��ȡ#####vector�䳤���飬��̬���ݣ�˫�����ݣ���̯���Ӷ�o(1)vector&lt;int&gt; a(10,3)����һ������Ϊ10��vector������ÿ��������3 1front()&#x2F;back();push">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg">
-<meta property="og:image" content="https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202209171604805.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202209171609053.png">
-<meta property="article:published_time" content="2022-09-17T08:30:19.000Z">
-<meta property="article:modified_time" content="2022-11-12T08:44:30.557Z">
+<meta property="article:published_time" content="2022-11-12T08:45:19.000Z">
+<meta property="article:modified_time" content="2022-11-12T08:43:20.947Z">
 <meta property="article:author" content="CycloneJoker">
+<meta property="article:tag" content="���Ի���">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg">
   
   
   
-  <title>由直方图最大矩形引出单调栈问题 - CycloneJoker</title>
+  <title>STL - CycloneJoker</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -225,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="由直方图最大矩形引出单调栈问题"></span>
+            <span id="subtitle" data-typed-text="STL"></span>
           
         </div>
 
@@ -236,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-17 16:30" pubdate>
-          2022年9月17日 下午
+        <time datetime="2022-11-12 16:45" pubdate>
+          2022年11月12日 下午
         </time>
       </span>
     
@@ -248,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          2.4k 字
         
       </span>
     
@@ -259,7 +254,7 @@
         
         
         
-          16 分钟
+          21 分钟
         
       </span>
     
@@ -305,37 +300,31 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">由直方图最大矩形引出单调栈问题</h1>
+            <h1 style="display: none">STL</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="由力扣84引出单调栈问题"><a href="#由力扣84引出单调栈问题" class="headerlink" title="由力扣84引出单调栈问题"></a><center>由力扣84引出单调栈问题</h2><h3 id="leetcode-84"><a href="#leetcode-84" class="headerlink" title=" leetcode 84"></a><center> leetcode 84</h3><p>给定 <em>n</em> 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
-<p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
-<p><strong>示例 1:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">输入：heights = [2,1,5,6,2,3]<br>输出：10<br>解释：最大的矩形为图中红色区域，面积为 10<br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">输入： heights = [2,4]<br>输出： 4<br></code></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= heights.length &lt;=10^5</code></li>
-<li><code>0 &lt;= heights[i] &lt;= 10^4</code></li>
-</ul>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a><center>思路</h3><ol>
-<li>这一题一开始看到的时候是不太好想到单调栈的，然而在复习912数据结构的过程中，讲到栈之后邓俊辉老师的pdf中举了这个例题（图1.1），才恍然大悟可以用到单调栈，遂上网搜一下来练手，有所感悟<br><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202209171604805.png" srcset="/img/loading.gif" lazyload alt="图1.1" title="图1.1"><br>可以看到原理是很清晰的，然而由于邓老师大部分时候都是英文授课，因此还是有些不解的地方，自己挑战这一题还是失败了，于是开始看leetcode官方题解，发现讲的甚至更不通俗。。。反思之后才发现是自己对单调栈的用法根本不了解，这就引出了对于单调栈更深刻的学习，查阅资料之后才发现，单调栈是可以用来解决一系列的问题的时空复杂度均为o(n)的算法，例如解决The Next Greater Number问题(图1.2)<br><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202209171609053.png" srcset="/img/loading.gif" lazyload alt="图1.2" title="图1.2"></li>
-<li>那么接下来思路就很清晰了，单调栈问题的一个统一规律就是，在给出的一个数组中，找出从当前秩元素开始，沿某个方向的，第一个具备某个特征的数，这个特征往往是，较小，较大，或者其他可以用比较来判定的数。那么回到力扣84的这一题，寻找连续直方图最大矩形，本质上就是要找出每个元素尽力扩张出来的矩形的面积，然后进行对比，这个面积的计算过程需要长度 * 宽度，那么在当前长度（当前元素下）沿某个方向扩展（寻找宽度）就很符合单调栈的应用场景了。</li>
-<li>首先我们枚举一个柱子<em>i</em>作为高，之后向左右两边扩展，使得扩展到的柱子的高度均不小于 <em>hh</em>。换句话说，我们需要找到<strong>左右两侧最近的高度小于 <em>hh</em> 的柱子</strong>，这样这两根柱子之间（不包括其本身）的所有柱子高度均不小于 <em>hh</em>，并且就是 <em>i</em> 能够扩展到的最远范围。<ul>
-<li>我们用一个栈来存放当前<em>i</em>之前的j值，从栈底到栈顶，<em>j</em> 的值严格单调递增，同时对应的高度值也严格单调递增</li>
-<li>当我们枚举到第 <em>i</em> 根柱子时，我们从栈顶不断地移除 <code>height[j]&gt;=height[i]</code> 的 <em>j</em> 值。在移除完毕后，栈顶的 <em>j</em> 值就一定满足 <code>height[j]&lt;height[i]</code>，此时 <em>j</em> 就是 <em>i</em> 左侧且最近的小于其高度的柱子。<br>这里会有一种特殊情况。如果我们移除了栈中所有的 <em>j</em> 值，那就说明 i 左侧所有柱子的高度都大于height[i]，那么我们可以认为 i 左侧且最近的小于其高度的柱子在位<code>j=-1</code>，它是一根「虚拟」的、高度无限低的柱子。这样的定义不会对我们的答案产生任何的影响，我们也称这根「虚拟」的柱子为「哨兵」。</li>
-<li>我们再将 <em>i</em> 放入栈顶。再用相同的方法，我们从右向左进行遍历，就可以得到左侧的边界了。</li>
-</ul>
-</li>
-<li>代码如下：<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs excel">class Solution &#123;<br>publ<span class="hljs-symbol">ic:</span><br>    <span class="hljs-built_in">int</span> largestRectangleArea(vector&lt;<span class="hljs-built_in">int</span>&gt;&amp; heights) &#123;<br>        <span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span> = heights.size();<br>        vector&lt;<span class="hljs-built_in">int</span>&gt; <span class="hljs-built_in">left</span>(<span class="hljs-built_in">n</span>), <span class="hljs-built_in">right</span>(<span class="hljs-built_in">n</span>, <span class="hljs-built_in">n</span>);<br>        <br>        stack&lt;<span class="hljs-built_in">int</span>&gt; mono_stack;<br>        for (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">n</span>; ++i) &#123;<br>            while (!mono_stack.empty() &amp;&amp; heights[mono_stack.top()] &gt;= heights[i]) &#123;<br>                <span class="hljs-built_in">right</span>[mono_stack.top()] = i;<br>                mono_stack.pop();<br>            &#125;<br>            <span class="hljs-built_in">left</span>[i] = (mono_stack.empty() ? -<span class="hljs-number">1</span> <span class="hljs-symbol">:</span> mono_stack.top());<br>            mono_stack.push(i);<br>        &#125;<br>        <br>        <span class="hljs-built_in">int</span> ans = <span class="hljs-number">0</span>;<br>        for (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">n</span>; ++i) &#123;<br>            ans = <span class="hljs-built_in">max</span>(ans, (<span class="hljs-built_in">right</span>[i] - <span class="hljs-built_in">left</span>[i] - <span class="hljs-number">1</span>) * heights[i]);<br>        &#125;<br>        return ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure></li>
-<li>时间复杂度分析：每个元素只需要进栈一次，出栈一次，因此时间复杂度O(n)，空间复杂度，申请了一个空间为n的栈，因此空间复杂度为O(n)。</li>
+                <p>###<center>STL<br><code>a.size()</code>��<code>a.empty()</code>����Ψһ�ģ�ÿ��stl��������˵��ã��������Ӷ�Ϊ<code>o(1)</code>ֱ��ȡ<br>#####vector<br>�䳤���飬��̬���ݣ�˫�����ݣ���̯���Ӷ�o(1)<br><code>vector&lt;int&gt; a(10,3)</code>����һ������Ϊ10��vector������ÿ��������3</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">front</span>()/<span class="hljs-title">back</span>();<span class="hljs-title">push_back</span>()/<span class="hljs-variable">pop_back</span>;<span class="hljs-title">begin</span>()/<span class="hljs-title">end</span>();<span class="hljs-title">empty</span>();<span class="hljs-title">erase</span>();</span><br></code></pre></td></tr></table></figure>
+<p><code>for(auto x:a)</code>ΪC++11������ķ�Χ�������������Ч�ʸ��ߡ�<br>vector֧�ֱȽ�����<br>#####pair<br><code>pair&lt;int,int&gt;</code>�洢һ����Ԫ�飬ǰ��������Ϳ������⣬<code>eg:pair&lt;int,string&gt;</code>�����е���<code>a.first</code>���ص�һ��Ԫ�أ�<code>a.second</code>���صڶ���Ԫ�أ�Ҳ֧�ֱȽϣ���<code>first</code>Ϊ��һ�ؼ��֣���<code>second</code>Ϊ�ڶ��ؼ��֡�����ͬʱ���������ԡ���������Ƕ�״洢������ͬ�����ԡ�<br>#####string<br>�ַ���,<code>substr()</code>����ĳһ���Ӵ���<code>c_str()</code>����һ���ַ������ͷָ�루��ʼ��ַ����<br><code>string a = &quot;lzyq&quot;,a += &quot;acwing&quot;;</code>����ʵ���ַ���ƴ��<br><code>a.substr(1,2)</code>������zy��ʡ�Եڶ�������������򷵻������ִ�<br><code>size()/length()</code>�����ַ�������<br>#####queue</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scss">����β���룬<span class="hljs-built_in">push</span>();<br>���ض�ͷԪ�أ�<span class="hljs-built_in">front</span>();<br>���ض�βԪ�أ�<span class="hljs-built_in">back</span>();<br>�Ѷ�ͷ������<span class="hljs-built_in">pop</span>();<br>�޷�<span class="hljs-attribute">clear</span>()<br></code></pre></td></tr></table></figure>
+<p>#####priority_queue<br>���ȼ����У�Ĭ���Ǵ����<br><code>#include &lt;queue&gt;</code></p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino">priority_queue&lt;<span class="hljs-type">int</span>&gt; heap;<span class="hljs-comment">//�����</span><br>priority_queue&lt;<span class="hljs-type">int</span>,vector&lt;<span class="hljs-type">int</span>&gt;,greater&lt;<span class="hljs-type">int</span>&gt;&gt; heap;<span class="hljs-comment">//С����</span><br><span class="hljs-built_in">push</span>()���������Ԫ�أ�<span class="hljs-built_in">top</span>()���ضѶ���<span class="hljs-built_in">pop</span>()�����Ѷ���������<span class="hljs-built_in">delmax</span>()<br>û��clear����<br></code></pre></td></tr></table></figure>
+<p>#####stack<br>ջ</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">push</span>();<span class="hljs-attribute">top</span>();<span class="hljs-built_in">pop</span>();<span class="hljs-built_in">size</span>();<span class="hljs-built_in">empty</span>();<br></code></pre></td></tr></table></figure>
+<p>#####deque<br>��ǿ��vector��˫�˶��У���ͷ��β�����Բ���ɾ��������֧���������<code>[]</code></p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">size</span>();<span class="hljs-title">empty</span>();<span class="hljs-title">clear</span>();<span class="hljs-title">front</span>();<span class="hljs-title">back</span>();<span class="hljs-title">push_back</span>()/<span class="hljs-title">pop_back</span>();<span class="hljs-title">push_front</span>()/<span class="hljs-title">pop_front</span>();<span class="hljs-title">begin</span>()/<span class="hljs-title">end</span>();</span><br></code></pre></td></tr></table></figure>
+<p>֧�����Ѱַ��Ч�ʵ͵����˷�ָ<br>#####set��map��multiset��multimap<br><code>#include &lt;map&gt;</code><br>����ʱ�临�ӶȻ����϶���<code>o(logn)</code><br>����BBST(�����)����̬ά���������С�</p>
+<ol>
+<li><code>set</code>���治�������ظ�Ԫ�أ���������ظ��ᱻ���ԣ�<code>multiset</code>�������ظ�Ԫ�� <figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">insert</span>()����һ����;</span><br><span class="hljs-function"><span class="hljs-title">find</span>()����һ����;</span><br><span class="hljs-function"><span class="hljs-title">count</span>()����ĳ�����ĸ���;</span><br><span class="hljs-function"><span class="hljs-title">erase</span>()</span><br>    ������һ������ɾ�����<span class="hljs-variable">е</span>���������Ľڵ㣬�����������ɾ�������������<br><span class="hljs-function"><span class="hljs-title">lower_bound</span>()/<span class="hljs-title">upper_bound</span>();</span><br><span class="hljs-function">    ǰ�߷��ش��ڵ���<span class="hljs-variable">x</span>��<span class="hljs-variable">С</span>���������߷��ش���<span class="hljs-variable">x</span>����<span class="hljs-variable">С</span>�����������Ի��ԡ�</span><br></code></pre></td></tr></table></figure></li>
+<li><code>map</code>��<code>multimap</code>Ҳ֧��<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-built_in">insert</span>();���������һ��pair<br>erase;����Ĳ�����pair���ߵ�����<br><span class="hljs-built_in">find</span>();<br>����������һ����ʹ��<br>eg:map&lt;string,<span class="hljs-type">int</span>&gt; a;<br>a[<span class="hljs-string">&quot;lzyq&quot;</span>] = <span class="hljs-number">1</span>; <span class="hljs-comment">//�������ӳ��</span><br><span class="hljs-built_in">lower_bound</span>()/<span class="hljs-built_in">upper_bound</span>();<br></code></pre></td></tr></table></figure></li>
 </ol>
+<p>#####unordered_set��unordered_map��unordered_multiset��unordered_multimap<br>���ڹ�ϣ����ʵ�ֵģ������������һ������ɾ�Ĳ�ʱ�临�Ӷȶ���<code>o(1)</code>,��֧��<code>lower_bound()/upper_bound()</code>;Ҳ֧�ֵ�������++��–<br>#####bitset<br>��λͼӦ����һ��ԭ�������ǲ�̫һ����ѹ����λͼ���д洢<br><code>bitset&lt;10000&gt; A</code>����һ������Ϊ10000��bitset<br>֧��<code>~,&amp;,|,^,&gt;&gt;,&lt;&lt;,&gt;&gt;,==,!=,[];</code></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">count</span>()�����ж��ٸ�<span class="hljs-number">1</span>;<br><span class="hljs-built_in">any</span>()�ж��Ƿ�������һ��<span class="hljs-number">1</span>;<br><span class="hljs-attribute">none</span>()�ж��Ƿ�ȫΪ<span class="hljs-number">0</span>;<br><span class="hljs-built_in">set</span>()������λ�ñ��<span class="hljs-number">1</span>;<br><span class="hljs-built_in">set</span>(k,v)�ѵ�kλ���v;<br><span class="hljs-built_in">reset</span>()������λ���<span class="hljs-number">0</span><br><span class="hljs-built_in">flip</span>()�ȼ���~;<br><span class="hljs-built_in">flip</span>(k)�ѵ�kλȡ��;<br></code></pre></td></tr></table></figure>
+
+<p>#####list<br>�б���ListNode֮���</p>
+<p>####<del>��ʵ��ûɶ�õĶ�������ΪҪ�õ�ʱ��ֱ�������ͺ���</del></p>
 
                 
               </div>
@@ -354,7 +343,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/DSA/" class="category-chain-item">DSA</a>
+  <a href="/categories/%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDDSA/" class="category-chain-item">���Ի�����DSA</a>
   
   
 
@@ -369,9 +358,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/hexo/">#hexo</a>
+        <a href="/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD/">#���Ի���</a>
       
-        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+        <a href="/tags/hexo/">#hexo</a>
       
     </div>
   
@@ -383,8 +372,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>由直方图最大矩形引出单调栈问题</div>
-      <div>http://example.com/2022/09/17/由直方图最大矩形引出单调栈问题/</div>
+      <div>STL</div>
+      <div>http://example.com/2022/11/12/STL/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +385,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月17日</div>
+          <div>2022年11月12日</div>
         </div>
       
       
@@ -428,18 +417,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="�ַ�����ϣ">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">�ַ�����ϣ</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/16/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2022/11/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" title="�ַ�����ϣ">
+                        <span class="hidden-mobile">�ַ�����ϣ</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
