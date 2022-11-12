@@ -17,26 +17,26 @@
   <meta name="author" content="CycloneJoker">
   <meta name="keywords" content="">
   
-    <meta name="description" content="##�ַ�����ϣ####�����������ڰ��ַ��������һ��p���Ƶ������ó�һ��ǰ׺�Ĺ�ϣֵ��pһ��ȡ131��13331ʱ���ᷢ����ͻ����Ϊ�������Ƚϴ������ҪMod Q�������õ�һ����0~Q-1֮�䡣####ע������  �������ֲ���ӳ���0����Ϊ0��p���ƻ���0����˶��ͬ�������֣">
+    <meta name="description" content="##字符串哈希####开端核心在于把字符串想象成一个p进制的数，得出一个前缀的哈希值，p一般取131，13331时不会发生冲突，因为这个数会比较大，因此需要Mod Q处理，得到一个在0~Q-1之间。####注意事项  首先数字不能映射成0，因为0的p进制还是0，因此多个同样的数字，不同的字符串就变成了同样的数字。 字符串哈希是一个假设不会发生冲突的过程，p取131或13331，Q取2^64，没有处">
 <meta property="og:type" content="article">
-<meta property="og:title" content="�ַ�����ϣ">
+<meta property="og:title" content="字符串哈希">
 <meta property="og:url" content="http://example.com/2022/11/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/index.html">
 <meta property="og:site_name" content="CycloneJoker">
-<meta property="og:description" content="##�ַ�����ϣ####�����������ڰ��ַ��������һ��p���Ƶ������ó�һ��ǰ׺�Ĺ�ϣֵ��pһ��ȡ131��13331ʱ���ᷢ����ͻ����Ϊ�������Ƚϴ������ҪMod Q�������õ�һ����0~Q-1֮�䡣####ע������  �������ֲ���ӳ���0����Ϊ0��p���ƻ���0����˶��ͬ�������֣">
+<meta property="og:description" content="##字符串哈希####开端核心在于把字符串想象成一个p进制的数，得出一个前缀的哈希值，p一般取131，13331时不会发生冲突，因为这个数会比较大，因此需要Mod Q处理，得到一个在0~Q-1之间。####注意事项  首先数字不能映射成0，因为0的p进制还是0，因此多个同样的数字，不同的字符串就变成了同样的数字。 字符串哈希是一个假设不会发生冲突的过程，p取131或13331，Q取2^64，没有处">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111713666.png">
 <meta property="article:published_time" content="2022-11-12T08:45:19.000Z">
-<meta property="article:modified_time" content="2022-11-12T08:58:06.417Z">
+<meta property="article:modified_time" content="2022-11-12T09:00:08.369Z">
 <meta property="article:author" content="CycloneJoker">
 <meta property="article:tag" content="hexo">
-<meta property="article:tag" content="�㷨">
-<meta property="article:tag" content="ģ����">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="模板题">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111713666.png">
   
   
   
-  <title>�ַ�����ϣ - CycloneJoker</title>
+  <title>字符串哈希 - CycloneJoker</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -223,7 +223,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="�ַ�����ϣ"></span>
+            <span id="subtitle" data-typed-text="字符串哈希"></span>
           
         </div>
 
@@ -246,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1k 字
         
       </span>
     
@@ -257,7 +257,7 @@
         
         
         
-          10 分钟
+          9 分钟
         
       </span>
     
@@ -303,23 +303,23 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">�ַ�����ϣ</h1>
+            <h1 style="display: none">字符串哈希</h1>
             
             
               <div class="markdown-body">
                 
-                <p>##<center>�ַ�����ϣ</center><br>####����<br>�������ڰ��ַ��������һ��p���Ƶ������ó�һ��ǰ׺�Ĺ�ϣֵ��pһ��ȡ131��13331ʱ���ᷢ����ͻ����Ϊ�������Ƚϴ������ҪMod Q�������õ�һ����0~Q-1֮�䡣<br>####ע������</p>
+                <p>##<center>字符串哈希</center><br>####开端<br>核心在于把字符串想象成一个p进制的数，得出一个前缀的哈希值，p一般取131，13331时不会发生冲突，因为这个数会比较大，因此需要Mod Q处理，得到一个在0~Q-1之间。<br>####注意事项</p>
 <ol>
-<li>�������ֲ���ӳ���0����Ϊ0��p���ƻ���0����˶��ͬ�������֣���ͬ���ַ����ͱ����ͬ�������֡�</li>
-<li>�ַ�����ϣ��һ�����費�ᷢ����ͻ�Ĺ��̣�pȡ131��13331��Qȡ2^64��û�д�����ͻ��������</li>
-<li>��������һ��ǰ׺��ϣ������һ����ʽ��������κ�һ���ִ��Ĺ�ϣֵ��</li>
-<li>ʵ���ϲ���Ҫȡģ��������п�������unsigned long long ���洢���е�h�������ʵ��ȡģ��Ч����</li>
+<li>首先数字不能映射成0，因为0的p进制还是0，因此多个同样的数字，不同的字符串就变成了同样的数字。</li>
+<li>字符串哈希是一个假设不会发生冲突的过程，p取131或13331，Q取2^64，没有处理冲突的能力。</li>
+<li>可以利用一个前缀哈希，利用一个公式计算出来任何一个字串的哈希值。</li>
+<li>实质上不需要取模，计算机中可以利用unsigned long long 来存储所有的h，将溢出实现取模的效果。</li>
 </ol>
-<p>####��ⷽ��<br><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111713666.png" srcset="/img/loading.gif" lazyload alt="��ⷽ��"><br>�ɴ˿ɼ�h[l-r] &#x3D; h[r] - h[l] * P^(r-l+1)<br>####����<br>�ɴ˿�֪���ǵĽ��ۣ�h[i] &#x3D; h[i-1] * P + str[i];<br>####����</p>
-<center>AcWing 841.�ַ�����ϣ</center>
+<p>####求解方法<br><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111713666.png" srcset="/img/loading.gif" lazyload alt="求解方法"><br>由此可见h[l-r] &#x3D; h[r] - h[l] * P^(r-l+1)<br>####结论<br>由此可知我们的结论，h[i] &#x3D; h[i-1] * P + str[i];<br>####代码</p>
+<center>AcWing 841.字符串哈希</center>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100010</span>,P = <span class="hljs-number">131</span>;<br><br><span class="hljs-keyword">typedef</span>  <span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ULL;<br><br><span class="hljs-type">int</span> n ,m;<br><span class="hljs-type">char</span> str[N];<br>ULL h[N],p[N];<br><br><span class="hljs-function">ULL <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> h[r]-h[l<span class="hljs-number">-1</span>]*p[r-l+<span class="hljs-number">1</span>];<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%s&quot;</span>,&amp;n,&amp;m,str+<span class="hljs-number">1</span>);<br>    p[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i&lt;=n;i++)<br>    &#123;<br>        p[i] = p[i<span class="hljs-number">-1</span>] * P;<br>        h[i] = h[i<span class="hljs-number">-1</span>] * P + str[i];<br>    &#125;<br>    <span class="hljs-keyword">while</span>(m--)<br>    &#123;<br>        <span class="hljs-type">int</span> l1,r1,l2,r2;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d%d&quot;</span>,&amp;l1,&amp;r1,&amp;l2,&amp;r2);<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">get</span>(l1,r1)==<span class="hljs-built_in">get</span>(l2,r2)) <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Yes&quot;</span>);<br>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;No&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-####���н�ͼ
-![���н�ͼ](https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111721941.png)
+####运行截图
+![运行截图](https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202211111721941.png)
 
                 
               </div>
@@ -338,7 +338,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%EF%BF%BD%E3%B7%A8%EF%BF%BD%EF%BF%BDDSA/" class="category-chain-item">�㷨��DSA</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95%E3%80%81DSA/" class="category-chain-item">算法、DSA</a>
   
   
 
@@ -355,9 +355,9 @@
       
         <a href="/tags/hexo/">#hexo</a>
       
-        <a href="/tags/%EF%BF%BD%E3%B7%A8/">#�㷨</a>
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
       
-        <a href="/tags/g%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/">#ģ����</a>
+        <a href="/tags/%E6%A8%A1%E6%9D%BF%E9%A2%98/">#模板题</a>
       
     </div>
   
@@ -369,7 +369,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>�ַ�����ϣ</div>
+      <div>字符串哈希</div>
       <div>http://example.com/2022/11/12/字符串哈希/</div>
     </div>
     <div class="license-meta">
