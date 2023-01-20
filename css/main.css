@@ -840,7 +840,7 @@ i.iconfont {
   --line-color: #eaecef;
   --navbar-bg-color: #6495ED;
   --navbar-text-color: #fff;
-  --subtitle-color: #FFA07A;
+  --subtitle-color: #FFD700;
   --scrollbar-color: #c4c6c9;
   --scrollbar-hover-color: #a6a6a6;
   --button-bg-color: transparent;
@@ -865,7 +865,7 @@ i.iconfont {
     --line-color: #435266;
     --navbar-bg-color: #696969;
     --navbar-text-color: #d0d0d0;
-    --subtitle-color: #d0d0d0;
+    --subtitle-color: #4B0082;
     --scrollbar-color: #687582;
     --scrollbar-hover-color: #9da8b3;
     --button-bg-color: transparent;
@@ -900,7 +900,7 @@ i.iconfont {
   --line-color: #435266;
   --navbar-bg-color: #696969;
   --navbar-text-color: #d0d0d0;
-  --subtitle-color: #d0d0d0;
+  --subtitle-color: #4B0082;
   --scrollbar-color: #687582;
   --scrollbar-hover-color: #9da8b3;
   --button-bg-color: transparent;
