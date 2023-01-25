@@ -19,19 +19,22 @@
   
     <meta name="description" content="数学知识  欧拉函数 欧拉函数的定义： 1∼N1 \sim N1∼N中与NNN互质的数的个数被称为欧拉函数，记为ϕ(N)\phi(N)ϕ(N)。  互质的定义是 gcd(a,b)&#x3D;1gcd(a,b) &#x3D; 1gcd(a,b)&#x3D;1  若在算数基本定理中，N&#x3D;p1a1p2a2...pmamN &#x3D; p_1^{a_1}p_2^{a_2}...p_m^{a_m}N&#x3D;p1a1​​p2a2​​...pmam​​">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CycloneJoker">
-<meta property="og:url" content="http://example.com/2023/01/21/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86-2/index.html">
+<meta property="og:title" content="数学知识-1">
+<meta property="og:url" content="http://example.com/2023/01/25/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86-2/index.html">
 <meta property="og:site_name" content="CycloneJoker">
 <meta property="og:description" content="数学知识  欧拉函数 欧拉函数的定义： 1∼N1 \sim N1∼N中与NNN互质的数的个数被称为欧拉函数，记为ϕ(N)\phi(N)ϕ(N)。  互质的定义是 gcd(a,b)&#x3D;1gcd(a,b) &#x3D; 1gcd(a,b)&#x3D;1  若在算数基本定理中，N&#x3D;p1a1p2a2...pmamN &#x3D; p_1^{a_1}p_2^{a_2}...p_m^{a_m}N&#x3D;p1a1​​p2a2​​...pmam​​">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-21T01:19:32.160Z">
-<meta property="article:modified_time" content="2023-01-25T13:13:37.909Z">
+<meta property="article:published_time" content="2023-01-25T13:16:20.000Z">
+<meta property="article:modified_time" content="2023-01-25T13:17:46.804Z">
 <meta property="article:author" content="CycloneJoker">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CycloneJoker</title>
+  <title>数学知识-1 - CycloneJoker</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -42,6 +45,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -218,7 +223,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="数学知识-1"></span>
           
         </div>
 
@@ -229,8 +234,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-21 09:19" pubdate>
-          2023年1月21日 上午
+        <time datetime="2023-01-25 21:16" pubdate>
+          2023年1月25日 晚上
         </time>
       </span>
     
@@ -241,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.1k 字
+          7.2k 字
         
       </span>
     
@@ -252,7 +257,7 @@
         
         
         
-          59 分钟
+          60 分钟
         
       </span>
     
@@ -298,7 +303,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">数学知识-1</h1>
             
             
               <div class="markdown-body">
@@ -351,7 +356,7 @@ return res;<br />
     else puts(&quot;impossible&quot;);
 &#125;
 </code></pre>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment">#### 扩展欧几里得算法</span><br><br><span class="hljs-comment">##### 裴蜀定理</span><br><br>给定 $n<span class="hljs-variable">$ </span>对正整数 <span class="hljs-variable">$a</span>_i<span class="hljs-variable">$,</span><span class="hljs-variable">$b</span>_i<span class="hljs-variable">$，</span>对于每对数，求出一组 <span class="hljs-variable">$x</span>_i<span class="hljs-variable">$,</span><span class="hljs-variable">$y</span>_i<span class="hljs-variable">$，</span>使其满足 <span class="hljs-variable">$a_i</span> \times x_i + b_i \times y_i=gcd(a_i,b_i)<span class="hljs-variable">$。</span><br><br>扩展欧几里得的基础是之前提到过的[裴蜀定理]()，这里需要我们求出对应的每组<span class="hljs-string">`x,y`</span>；可以对普通欧几里得辗转相除法做优化。在求出每一轮<span class="hljs-string">`x,y`</span>的变化，递归进行即可：<br><br>![推导过程](<span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/cdn.jsdelivr.net/gh</span><span class="hljs-regexp">/lzyq0912/</span>CycloneJokerimg/img/<span class="hljs-number">202301232123931</span>.png)<br><br>代码如下：<br></code></pre></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs gcode"><br><span class="hljs-attr">#### 扩展欧几里得算法</span><br><span class="hljs-attr"></span><br><span class="hljs-attr">##### 裴蜀定理</span><br><span class="hljs-attr"></span><br><span class="hljs-attr">给定 $n$ 对正整数 $a_i$,$b_i$，对于每对数，求出一组 $x_i$,$y_i$，使其满足 $a_i \times x_i + b_i \times y_i=gcd(a_i,b_i)$。</span><br><span class="hljs-attr"></span><br><span class="hljs-attr">扩展欧几里得的基础是之前提到过的[裴蜀定理](https://lzyq0912</span>.github.io/<span class="hljs-number">2023</span>/<span class="hljs-number">01</span>/<span class="hljs-number">20</span>/<span class="hljs-meta">%</span>E<span class="hljs-number">6</span><span class="hljs-meta">%</span><span class="hljs-number">95</span><span class="hljs-meta">%</span>B<span class="hljs-number">0</span><span class="hljs-meta">%</span>E<span class="hljs-number">5</span><span class="hljs-meta">%</span>AD<span class="hljs-meta">%</span>A<span class="hljs-number">6</span><span class="hljs-meta">%</span>E<span class="hljs-number">7</span><span class="hljs-meta">%</span><span class="hljs-number">9</span>F<span class="hljs-meta">%</span>A<span class="hljs-number">5</span><span class="hljs-meta">%</span>E<span class="hljs-number">8</span><span class="hljs-meta">%</span>AF<span class="hljs-meta">%</span><span class="hljs-number">86</span><span class="hljs-number">-1</span>/<span class="hljs-attr">#%E5</span><span class="hljs-meta">%</span>AE<span class="hljs-meta">%</span><span class="hljs-number">9</span>A<span class="hljs-meta">%</span>E<span class="hljs-number">7</span><span class="hljs-meta">%</span><span class="hljs-number">90</span><span class="hljs-meta">%</span><span class="hljs-number">864</span>-<span class="hljs-meta">%</span>E<span class="hljs-number">8</span><span class="hljs-meta">%</span>A<span class="hljs-number">3</span><span class="hljs-meta">%</span>B<span class="hljs-number">4</span><span class="hljs-meta">%</span>E<span class="hljs-number">8</span><span class="hljs-meta">%</span><span class="hljs-number">9</span>C<span class="hljs-meta">%</span><span class="hljs-number">80</span><span class="hljs-meta">%</span>E<span class="hljs-number">5</span><span class="hljs-meta">%</span>AE<span class="hljs-meta">%</span><span class="hljs-number">9</span>A<span class="hljs-meta">%</span>E<span class="hljs-number">7</span><span class="hljs-meta">%</span><span class="hljs-number">90</span><span class="hljs-meta">%</span><span class="hljs-number">86</span>)，这里需要我们求出对应的每组`x,y`；可以对普通欧几里得辗转相除法做优化。在求出每一轮`x,y`的变化，递归进行即可：<br><br>![推导过程]<span class="hljs-comment">(https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301232123931.png)</span><br><br>代码如下：<br></code></pre></td></tr></table></figure>
 <p>#include <iostream><br />
 #include <algorithm></p>
 <p>using namespace std;</p>
@@ -406,6 +411,38 @@ return 0;
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AE%97%E6%B3%95%E3%80%81%E6%95%B0%E5%AD%A6/" class="category-chain-item">算法、数学</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hexo/">#hexo</a>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+      
+    </div>
   
 </div>
 
@@ -415,8 +452,8 @@ return 0;
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2023/01/21/数学知识-2/</div>
+      <div>数学知识-1</div>
+      <div>http://example.com/2023/01/25/数学知识-2/</div>
     </div>
     <div class="license-meta">
       
@@ -428,7 +465,7 @@ return 0;
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月21日</div>
+          <div>2023年1月25日</div>
         </div>
       
       
@@ -547,6 +584,11 @@ return 0;
 
 
   
+
+
+  
+  
+
 
 
 
