@@ -24,18 +24,18 @@
 <meta property="og:site_name" content="CycloneJoker">
 <meta property="og:description" content="动态规划-第三部分  计数类DP  整数划分 将一个正整数划分为若干个正整数的和，且这些正整数从大到小排列，例如5 &#x3D; 4 + 1；现在求对于给定的正整数n有多少种表示方式。 首先还是分析集合，集合的属性和如何划分。我们观察，本题与完全背包问题一一对应，每种划分的某个数字的个数就对应了完全背包问题中某种物品选几个，因此我们回忆完全背包的状态表示和状态计算，f[i][j]代表的是所有从1~i中选并且">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301091855187.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301120817302.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301120833074.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301121014461.png">
+<meta property="og:image" content="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121026054.png">
+<meta property="og:image" content="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027845.png">
+<meta property="og:image" content="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027869.png">
+<meta property="og:image" content="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027453.png">
 <meta property="article:published_time" content="2023-01-12T12:36:20.000Z">
-<meta property="article:modified_time" content="2023-01-14T03:15:17.277Z">
+<meta property="article:modified_time" content="2023-02-12T02:29:36.995Z">
 <meta property="article:author" content="CycloneJoker">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="模板题">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301091855187.png">
+<meta name="twitter:image" content="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121026054.png">
   
   
   
@@ -319,7 +319,7 @@
 <p>将一个正整数划分为若干个正整数的和，且这些正整数从大到小排列，例如5 = 4 + 1；现在求对于给定的正整数<code>n</code>有多少种表示方式。</p>
 <p>首先还是分析集合，集合的属性和如何划分。我们观察，本题与完全背包问题一一对应，每种划分的某个数字的个数就对应了完全背包问题中某种物品选几个，因此我们回忆完全背包的状态表示和状态计算，<code>f[i][j]</code>代表的是所有从<code>1~i</code>中选并且体积是<code>j</code>的选法的数量。对应的划分是以第<code>i</code>个物品选几个来划分的，即<code>f[i][j] = f[i-1][j-v[i]*k]+w[i]*k</code>，我们发现本题中对应整数划分来说，每种物品的价值均等，体积相同，因此可以省去<code>w[i]</code>这个参数，即<code>f[i][j] = f[i-1][j-k*i]; k = 1,2,...,s;其中s*k&lt;=j</code></p>
 <p>与完全背包问题相同，这种写法时间复杂度超高，我们需要对其进行优化，同样的，观察将<code>f[i][j]</code>和<code>f[i][j-i]</code>分别展开，发现如下的关系</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301091855187.png" srcset="/img/loading.gif" lazyload alt="推导关系" /></p>
+<p><img src="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121026054.png" srcset="/img/loading.gif" lazyload alt="推导关系" /></p>
 <p>因此<code>f[i][j] = f[i-1][j] + f[i][j-i];</code><br />
 一维优化过程与完全背包问题也完全相同，因此代码如下：</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-built_in">int</span> <span class="hljs-title">main</span>()</span><br>&#123;<br>    cin &gt;&gt; n;<br>    f[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;  <span class="hljs-comment">//一个数都不分，选法自然为1</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">1</span>;i&lt;=n;i++)<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = i;j&lt;=n;j++)<br>            f[j] = (f[j] + f[j-i])%mod; <span class="hljs-comment">//结果可能过大，按照题意取模输出</span><br>    cout &lt;&lt; f[n] &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -378,13 +378,13 @@
 </blockquote>
 <h4 id="蒙德里安的梦想"><a class="markdownIt-Anchor" href="#蒙德里安的梦想"></a> 蒙德里安的梦想</h4>
 <p>给定一个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∗</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n*m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>个单位的大方块，要求将大方块划分成小方块，小方块均为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∗</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2*1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 大小，求有多少种划分方案，例如<code>n = 2,m = 4</code>时有如下图所示的划分方案：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301120817302.png" srcset="/img/loading.gif" lazyload alt="划分方案" /></p>
+<p><img src="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027845.png" srcset="/img/loading.gif" lazyload alt="划分方案" /></p>
 <h5 id="问题核心"><a class="markdownIt-Anchor" href="#问题核心"></a> 问题核心</h5>
 <p>本题的数据范围为<code>1&lt;=(n,m)&lt;=11;</code>故考虑可以用状态压缩DP来做，而本体的解题核心是<strong>先分析横着放的，再分析竖着放的</strong>，从而有总方案数 = 只放横着的方块的合法方案数。判断合法与否的规则是剩余位置能否填充满竖着的方块。而方块竖着的情况占据一个列单位，两个行单位，故只需判别大方块空余列内单位内的连续行单位数目为<strong>偶数个</strong>即可。</p>
 <h5 id="解题方案"><a class="markdownIt-Anchor" href="#解题方案"></a> 解题方案</h5>
 <p>采用动态规划的解题方案，首先还是确定集合表示，本题中<code>f[i][j]</code>可以表示为：已经将前<code>i-1</code>列方块摆好，且有方块跨越第<code>i-1</code>列和第<code>i</code>列的所有状态为<code>j</code>的方案的集合。<br />
 这种表述方式似乎令人费解，不过下图可以更好的说明集合是如何表示的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301120833074.png" srcset="/img/loading.gif" lazyload alt="状态表示" /></p>
+<p><img src="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027869.png" srcset="/img/loading.gif" lazyload alt="状态表示" /></p>
 <p>上图虽然方案不合法，但是已足够说明我们的表示规则：<code>j</code>在状态压缩DP中作为一个二进制字符串表示对应状态存在与否，于是，对于上图中的状态来说，<code>i = 2,j = 11001;</code><br />
 接下来我们只需进行状态划分即可，按照惯例，根据最后一步所做的不固定的操作来对集合进行划分。</p>
 <p>考察本题，<code>f[i][j]</code>已经表示了跨越第<code>i-1</code>列和第<code>i</code>列的状态集合，那么此时对于f[i][j]来说跨越第<code>i-1</code>列和第<code>i</code>列的方块是固定的，不固定的是上一步跨越<code>i-2</code>列到<code>i-1</code>列方块的状态，我们对此进行分类讨论：</p>
@@ -405,7 +405,7 @@
 即遍历状态串遇到1时才会进入判断，如果最后出现的1后面还有连续奇数个0一样是非法状态，因此我们需要在循环最后额外添加一个判断</li>
 <li><code>st[i|j]</code>是个什么勾巴东西，目的是为了同时判断<code>j</code>状态和<code>k</code>状态的状态是否合法，如下图引用<code>@chosen1pm</code>同学所示</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/lzyq0912/CycloneJokerimg/img/202301121014461.png" srcset="/img/loading.gif" lazyload alt="st[i|j]" /></p>
+<p><img src="https://cyclonejoker.oss-cn-hangzhou.aliyuncs.com/image/202302121027453.png" srcset="/img/loading.gif" lazyload alt="st[i|j]" /></p>
 <p>那么就到此为止吧，<s>蒙德里安再也不要做梦了</s></p>
 <h4 id="最短hamilton路径"><a class="markdownIt-Anchor" href="#最短hamilton路径"></a> 最短Hamilton路径</h4>
 <p>一张图有<code>n</code>个点，每个边有权值，对这些点从0到n-1编号，求起点0到终点<code>n-1</code>的最短汉密尔顿路径，汉密尔顿路径的定义是不重不漏经过图中每个点恰好一次。</p>
